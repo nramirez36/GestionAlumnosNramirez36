@@ -19,24 +19,16 @@ namespace nramirez.gestionAlumnos
 
         #endregion
         #region Constructor
-
-        #endregion
-        #region Eventos
-
-        #endregion
-        #region Metodos
-
-        #endregion
         public frmSplash()
         {
             InitializeComponent();
         }
-
+        #endregion
+        #region Eventos
         private void frmSplash_Load(object sender, EventArgs e)
         {
             progressBar1.Width = this.Width;
         }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             frmLogin frm = new frmLogin();
@@ -70,5 +62,10 @@ namespace nramirez.gestionAlumnos
                 this.Close();
             }
         }
+        #endregion
+        #region Metodos
+
+        #endregion
+
     }
 }

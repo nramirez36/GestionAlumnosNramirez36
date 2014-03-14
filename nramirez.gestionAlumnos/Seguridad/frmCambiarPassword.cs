@@ -1,4 +1,6 @@
-﻿using System;
+﻿using gestionalumnos.BL;
+using gestionalumnos.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,17 +21,37 @@ namespace nramirez.gestionAlumnos.Usuarios
 
         #endregion
         #region Constructor
-
-        #endregion
-        #region Eventos
-
-        #endregion
-        #region Metodos
-
-        #endregion
         public frmCambiarPassword()
         {
             InitializeComponent();
         }
+        #endregion
+        #region Eventos
+        private void frmCambiarPassword_Load(object sender, EventArgs e)
+        {
+            RegistrarControles();
+        }
+        #endregion
+        #region Metodos
+        private void RegistrarControles()
+        {
+            List<Controls> lista = new List<Controls>();
+            foreach (Control controlChotex in this.Controls)
+            {
+                Controls c = new Controls();
+                c.ControlID = controlChotex.Name;
+                c.Page = this.Name;
+                lista.Add(c);
+            }
+            GestorControles oGC = new GestorControles();
+            for (int i = 0; i < lista.Count; i++)
+            {
+                if (!oGC.Existe(lista[i]))
+                {
+                    oGC.Insertar(lista[i]);
+                }
+            }
+        }
+        #endregion
     }
 }

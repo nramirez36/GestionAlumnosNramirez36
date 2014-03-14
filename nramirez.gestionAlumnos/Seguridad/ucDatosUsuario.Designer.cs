@@ -101,6 +101,7 @@
             this.Name = "ucDatosUsuario";
             this.Size = new System.Drawing.Size(361, 128);
             this.Load += new System.EventHandler(this.ucDatosUsuario_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.ucDatosUsuario_Paint);
             this.ResumeLayout(false);
             this.PerformLayout();
 

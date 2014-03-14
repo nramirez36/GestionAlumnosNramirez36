@@ -60,7 +60,7 @@ namespace gestionalumnos.DL
             int result;
             try
             {
-                result = oDb.ExecuteNonQuery("Users_Baja", pUsers.Name, pUsers.Password,pUsers.FechaBaja);
+                result = oDb.ExecuteNonQuery("Users_Baja", pUsers.Name, pUsers.Password,pUsers.UserID, pUsers.FechaBaja);
                 if (result > 0)
                 {
                     return true;
@@ -173,12 +173,11 @@ namespace gestionalumnos.DL
         public static bool VerificarExistencia(string pName)
         { 
             Database oDb = DatabaseFactory.CreateDatabase("gestionAlumnos");
-            String result=string.Empty;
+            String result=null;
             try
             {
-                result = oDb.ExecuteScalar("Users_VerificarExistencia", pName).ToString();
-                //result = oDb.ExecuteNonQuery("Users_VerificarExistencia", pName);
-                if (result!=string.Empty)
+                List<gestionalumnos.Entities.Users> lst = oDb.ExecuteSprocAccessor("Users_VerificarExistencia", MapBuilder<gestionalumnos.Entities.Users>.MapAllProperties().Build(), pName).ToList();
+                if (lst != null && lst.Count > 0)
                 {
                     return true;
                 }
@@ -189,7 +188,7 @@ namespace gestionalumnos.DL
             }
             catch (Exception ex)
             {
-                Logger.WriteXMLError("Users.cs", "Users.cs", "Baja", ex.Message);
+                Logger.WriteXMLError("Users.cs", "Users.cs", "VerificarExistencia", ex.Message);
                 //Console.WriteLine("Problema Al Eliminar El Tipo De Documento: " + ex.Message);
                 throw;
             }

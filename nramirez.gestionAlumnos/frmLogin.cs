@@ -15,23 +15,37 @@ namespace nramirez.gestionAlumnos
     {
         #region Variables
         GestorUsers oGU = new GestorUsers();
-        #endregion        
+        #endregion
         #region Propiedades
 
         #endregion
         #region Constructor
-
-        #endregion
-        #region Eventos
-
-        #endregion
-        #region Metodos
-
-        #endregion
         public frmLogin()
         {
             InitializeComponent();
         }
+        #endregion
+        #region Eventos
+        private void btnIniciarSesion_Click(object sender, EventArgs e)
+        {
+            IniciarSesion();
+        }
+
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                IniciarSesion();
+            }
+        }
+        #endregion
+        #region Metodos
         private void IniciarSesion()
         {
             Users oUsers = new Users();
@@ -58,15 +72,11 @@ namespace nramirez.gestionAlumnos
                 }
             }
         }
-        private void btnIniciarSesion_Click(object sender, EventArgs e)
-        {
-            IniciarSesion();
-        }
         private bool validarControles()
         {
-            if ((txtUsuario.Text!=null && !txtUsuario.Text.Equals(string.Empty)) && txtUsuario.Text.Length<=50)
+            if ((txtUsuario.Text != null && !txtUsuario.Text.Equals(string.Empty)) && txtUsuario.Text.Length <= 50)
             {
-                if ((txtPassword.Text!=null && !txtPassword.Text.Equals(string.Empty)) && txtPassword.Text.Length<=50)
+                if ((txtPassword.Text != null && !txtPassword.Text.Equals(string.Empty)) && txtPassword.Text.Length <= 50)
                 {
                     return true;
                 }
@@ -84,18 +94,6 @@ namespace nramirez.gestionAlumnos
                 return false;
             }
         }
-
-        private void btnRegistrar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((int)e.KeyChar == (int)Keys.Enter)
-            {
-                IniciarSesion();
-            }
-        }
+        #endregion
     }
 }

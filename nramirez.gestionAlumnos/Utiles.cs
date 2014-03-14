@@ -16,6 +16,12 @@ namespace nramirez.gestionAlumnos
             CONSULTA = 3,
             BAJA = 4,
         }
+        public enum Roles
+        {
+            admin=1,
+            admiin=2,
+            asdasa=3,
+        }
         public static bool ComprobarFormatoEmail(string sEmailAComprobar)
         {
             String sFormato;
@@ -46,6 +52,7 @@ namespace nramirez.gestionAlumnos
             else
                 return false;
         }
+        
     }
 }
 

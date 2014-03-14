@@ -10,5 +10,6 @@ namespace gestionalumnos.Entities
     {
         public string Page { get; set; }
         public string ControlID { get; set; }
+        public int ControlPK { get; set; }
     }
 }

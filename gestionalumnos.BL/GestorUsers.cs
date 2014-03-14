@@ -23,7 +23,7 @@ namespace gestionalumnos.BL
         }
         public bool Baja(gestionalumnos.Entities.Users pUsers)
         {
-            return gestionalumnos.DL.Users.ReestablecerPassword(pUsers);
+            return gestionalumnos.DL.Users.Baja(pUsers);
         }
         public int ObtenerID()
         {

@@ -10,5 +10,6 @@ namespace gestionalumnos.Entities
     {
         public int RoleID { get; set; }
         public string RoleName { get; set; }
+        public DateTime? FechaBaja { get; set; }
     }
 }

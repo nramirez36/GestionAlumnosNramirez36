@@ -112,17 +112,35 @@
     <Compile Include="Init.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Seguridad\frmABMRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\frmABMRoles.Designer.cs">
+      <DependentUpon>frmABMRoles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Seguridad\frmABMUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Seguridad\frmABMUsuarios.Designer.cs">
       <DependentUpon>frmABMUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Seguridad\frmConsultaRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\frmConsultaRoles.Designer.cs">
+      <DependentUpon>frmConsultaRoles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Seguridad\frmConsultaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Seguridad\frmConsultaUsuarios.Designer.cs">
       <DependentUpon>frmConsultaUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\ucDatosRoles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Seguridad\ucDatosRoles.Designer.cs">
+      <DependentUpon>ucDatosRoles.cs</DependentUpon>
     </Compile>
     <Compile Include="Seguridad\ucDatosUsuario.cs">
       <SubType>UserControl</SubType>
@@ -180,11 +198,26 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Seguridad\frmABMRoles.resx">
+      <DependentUpon>frmABMRoles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Seguridad\frmABMUsuarios.resx">
       <DependentUpon>frmABMUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\frmCambiarPassword.resx">
+      <DependentUpon>frmCambiarPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\frmConsultaRoles.resx">
+      <DependentUpon>frmConsultaRoles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Seguridad\frmConsultaUsuarios.resx">
       <DependentUpon>frmConsultaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\frmReestablecerClave.resx">
+      <DependentUpon>frmReestablecerClave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\ucDatosRoles.resx">
+      <DependentUpon>ucDatosRoles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Seguridad\ucDatosUsuario.resx">
       <DependentUpon>ucDatosUsuario.cs</DependentUpon>

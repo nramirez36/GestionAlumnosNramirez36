@@ -110,7 +110,7 @@
             this.Controls.Add(this.btnConsultar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmConsultaUsuarios";
-            this.Text = "frmConsultaUsuarios";
+            this.Text = "Buscar Usuarios";
             this.Load += new System.EventHandler(this.frmConsultaUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
             this.ResumeLayout(false);

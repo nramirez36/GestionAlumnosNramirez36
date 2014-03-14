@@ -8,35 +8,45 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using gestionalumnos.Entities;
+using gestionalumnos.BL;
 namespace nramirez.gestionAlumnos.Seguridad.ABM_Usuarios
 {
     public partial class ucDatosUsuario : UserControl
     {
         #region Variables
-        
+
         #endregion
         #region Propiedades
-        
-        #endregion
-        #region Constructor
-        
-        #endregion
-        #region Eventos
-        
-        #endregion
-        #region Metodos
-        
-        #endregion
         public Users Usuario { get; set; }
         public bool ModoSoloLectura { get; set; }
+        #endregion
+        #region Constructor
 
+        #endregion
+        #region Eventos
 
-        public ucDatosUsuario()
+        #endregion
+        #region Metodos
+        private void RegistrarControles()
         {
-            InitializeComponent();
+            List<Controls> lista = new List<Controls>();
+            foreach (Control controlChotex in this.Controls)
+            {
+                Controls c = new Controls();
+                c.ControlID = controlChotex.Name;
+                c.Page = this.Name;
+                lista.Add(c);
+            }
+            GestorControles oGC = new GestorControles();
+            for (int i = 0; i < lista.Count; i++)
+            {
+                if (!oGC.Existe(lista[i]))
+                {
+                    oGC.Insertar(lista[i]);
+                }
+            }
         }
-
-        private void ucDatosUsuario_Load(object sender, EventArgs e)
+        public void HabilitarControles()
         {
             //CONSULTA DE DATOS--->TRUE
             if (ModoSoloLectura)
@@ -62,44 +72,63 @@ namespace nramirez.gestionAlumnos.Seguridad.ABM_Usuarios
         {
             bool res = false;
             string msg = "";
-            if (txtUsuario.Text==null || txtUsuario.Text.Equals(""))
+            if (txtUsuario.Text == null || txtUsuario.Text.Equals(""))
             {
-                MessageBox.Show("Debe ingresar el Usuario","Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Debe ingresar el Usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            if (txtPassword.Text==null || txtPassword.Text.Equals(""))
+            if (txtPassword.Text == null || txtPassword.Text.Equals(""))
             {
                 MessageBox.Show("Debe ingresar la Contraseña", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            if (txtEmail.Text==null ||txtEmail.Text.Equals(""))
+            if (txtEmail.Text == null || txtEmail.Text.Equals(""))
             {
-                MessageBox.Show("Debe ingresar el Email","Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Debe ingresar el Email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             //if (!Utiles.validarEmail(txtEmail.Text.Trim()))
-            if(!Utiles.ComprobarFormatoEmail(txtEmail.Text.Trim()))
+            if (!Utiles.ComprobarFormatoEmail(txtEmail.Text.Trim()))
             {
-                MessageBox.Show("Debe ingresar un Email valido","Error", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Debe ingresar un Email valido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             Usuario = new Users();
             Usuario.Name = txtUsuario.Text;
             Usuario.Password = txtPassword.Text;
-            Usuario.Email=txtEmail.Text;
+            Usuario.Email = txtEmail.Text;
             return true;
         }
         public void limpiarControles()
         {
             txtEmail.Text = "";
             txtPassword.Text = "";
-            txtUsuario.Text="";
+            txtUsuario.Text = "";
         }
+        #endregion
+
+
+
+        public ucDatosUsuario()
+        {
+            InitializeComponent();
+        }
+
+        private void ucDatosUsuario_Load(object sender, EventArgs e)
+        {
+            HabilitarControles();
+            RegistrarControles();
+        }
+
         public void llenarControles(string pUser, string pPass, string pEmail)
         {
             txtUsuario.Text = pUser;
             txtPassword.Text = pPass;
             txtEmail.Text = pEmail;
+        }
+        private void ucDatosUsuario_Paint(object sender, PaintEventArgs e)
+        {
+            HabilitarControles();
         }
     }
 }

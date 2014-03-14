@@ -41,10 +41,14 @@
   <ItemGroup>
     <Compile Include="GestorAlumnos.cs" />
     <Compile Include="GestorBarrios.cs" />
+    <Compile Include="GestorControles.cs" />
+    <Compile Include="GestorControlsToRole.cs" />
+    <Compile Include="GestorUsersToRoles.cs" />
     <Compile Include="GestorDepartamentos.cs" />
     <Compile Include="GestorDomicilios.cs" />
     <Compile Include="GestorLocalidades.cs" />
     <Compile Include="GestorProvincias.cs" />
+    <Compile Include="GestorRoles.cs" />
     <Compile Include="GestorTiposDocumentos.cs" />
     <Compile Include="GestorUsers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
