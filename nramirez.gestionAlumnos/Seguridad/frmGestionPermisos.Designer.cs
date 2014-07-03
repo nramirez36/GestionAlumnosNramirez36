@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ddlPage = new System.Windows.Forms.ComboBox();
             this.gbControles = new System.Windows.Forms.GroupBox();
+            this.lstControles = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.chkDisabled = new System.Windows.Forms.CheckBox();
@@ -40,7 +41,6 @@
             this.tvEstado = new System.Windows.Forms.TreeView();
             this.ByRoleRB = new System.Windows.Forms.RadioButton();
             this.ByControlRB = new System.Windows.Forms.RadioButton();
-            this.lstControles = new System.Windows.Forms.ListBox();
             this.gbControles.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,6 +77,16 @@
             this.gbControles.TabIndex = 4;
             this.gbControles.TabStop = false;
             this.gbControles.Text = "Permisos";
+            // 
+            // lstControles
+            // 
+            this.lstControles.FormattingEnabled = true;
+            this.lstControles.Location = new System.Drawing.Point(7, 20);
+            this.lstControles.Name = "lstControles";
+            this.lstControles.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.lstControles.Size = new System.Drawing.Size(266, 212);
+            this.lstControles.Sorted = true;
+            this.lstControles.TabIndex = 6;
             // 
             // button2
             // 
@@ -146,10 +156,12 @@
             // ByRoleRB
             // 
             this.ByRoleRB.AutoSize = true;
+            this.ByRoleRB.Checked = true;
             this.ByRoleRB.Location = new System.Drawing.Point(492, 470);
             this.ByRoleRB.Name = "ByRoleRB";
             this.ByRoleRB.Size = new System.Drawing.Size(60, 17);
             this.ByRoleRB.TabIndex = 66;
+            this.ByRoleRB.TabStop = true;
             this.ByRoleRB.Text = "Por Rol";
             this.ByRoleRB.UseVisualStyleBackColor = true;
             this.ByRoleRB.Click += new System.EventHandler(this.ByRoleRB_Click);
@@ -157,25 +169,13 @@
             // ByControlRB
             // 
             this.ByControlRB.AutoSize = true;
-            this.ByControlRB.Checked = true;
             this.ByControlRB.Location = new System.Drawing.Point(413, 470);
             this.ByControlRB.Name = "ByControlRB";
             this.ByControlRB.Size = new System.Drawing.Size(77, 17);
             this.ByControlRB.TabIndex = 65;
-            this.ByControlRB.TabStop = true;
             this.ByControlRB.Text = "Por Control";
             this.ByControlRB.UseVisualStyleBackColor = true;
             this.ByControlRB.CheckedChanged += new System.EventHandler(this.ByControlRB_CheckedChanged);
-            // 
-            // lstControles
-            // 
-            this.lstControles.FormattingEnabled = true;
-            this.lstControles.Location = new System.Drawing.Point(7, 20);
-            this.lstControles.Name = "lstControles";
-            this.lstControles.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.lstControles.Size = new System.Drawing.Size(266, 212);
-            this.lstControles.Sorted = true;
-            this.lstControles.TabIndex = 6;
             // 
             // frmGestionPermisos
             // 

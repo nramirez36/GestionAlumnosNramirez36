@@ -66,6 +66,8 @@ namespace nramirez.gestionAlumnos.Seguridad
         }
         private void frmGestionRoles_Load(object sender, EventArgs e)
         {
+
+            this.BackgroundImage = new Bitmap("C:\\Users\\Nicolas\\Documents\\Visual Studio 2012\\Projects\\nramirez36 - Proyectos\\nramirez.gestionAlumnos\\nramirez.gestionAlumnos\\Retro.png");
             RegistrarControles();
         }
         #endregion

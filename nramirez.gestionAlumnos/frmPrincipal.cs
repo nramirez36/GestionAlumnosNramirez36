@@ -188,7 +188,14 @@ namespace nramirez.gestionAlumnos
                 oControls = new gestionalumnos.Entities.Controls();
                 oControls.Page = this.Name;
                 List<Controls> listaControles = oGC.ListarPorPagina(oControls).ToList();
-                HabilitarControles(listaRoles[0].RoleID, listaControles);
+                if (listaControles.Count>0)
+                {
+                    for (int i = 0; i < listaControles.Count-1; i++)
+                    {
+                        HabilitarControles(listaRoles[i].RoleID, listaControles);      
+                    }
+                }
+                //HabilitarControles(listaRoles[0].RoleID, listaControles);
                 Console.Write("asdas");
 
 

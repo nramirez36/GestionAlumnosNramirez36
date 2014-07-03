@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="RegistrarConsulta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Asunto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Consulta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Apellido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarConsultaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistrarConsultaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCargos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="knownCategoryValues" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="category" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCargosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCargosResult" type="tns:ArrayOfCascadingDropDownNameValue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCascadingDropDownNameValue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CascadingDropDownNameValue" nillable="true" type="tns:CascadingDropDownNameValue" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CascadingDropDownNameValue">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="value" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="isDefaultValue" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="optionTitle" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RegistrarContacto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Apellido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TipoDoc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NumDoc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Motivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarContactoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistrarContactoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEspecialidades">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="knownCategoryValues" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="category" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEspecialidadesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEspecialidadesResult" type="tns:ArrayOfCascadingDropDownNameValue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarSuscripto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarSuscriptoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistrarSuscriptoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarEmpresa">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RazonSocial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Direccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Telefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Cuit" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mensaje" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarEmpresaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistrarEmpresaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUbicacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="knownCategoryValues" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="category" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUbicacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUbicacionResult" type="tns:ArrayOfCascadingDropDownNameValue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnvioConsulta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Consulta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailPara" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnvioConsultaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnvioConsultaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarEspecialidadesAutocomplete">
+        <s:complexType />
+      </s:element>
+      <s:element name="CargarEspecialidadesAutocompleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargarEspecialidadesAutocompleteResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CargarEspecialidadesBuscar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strBuscar" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarEspecialidadesBuscarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargarEspecialidadesBuscarResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarEspecialidadesBuscar2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strBuscar" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarEspecialidadesBuscar2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargarEspecialidadesBuscar2Result" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarCoberturasBuscar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strBuscar" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarCoberturasBuscarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargarCoberturasBuscarResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarAtencionPaciente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strAsunto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConsulta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strNombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strApellido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTelefono" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEmail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarAtencionPacienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargarAtencionPacienteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarAtencionEmpresas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strRazon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDireccion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCUIT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConsulta" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTelefono" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarAtencionEmpresasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargarAtencionEmpresasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarTrabajaNosotros">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strNombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strApellido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDisponibilidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strZona" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPostulacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEnfermero" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarTrabajaNosotrosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargarTrabajaNosotrosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCentros">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="knownCategoryValues" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="category" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCentrosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCentrosResult" type="tns:ArrayOfCascadingDropDownNameValue" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEspecialidadesPorCentro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="centroID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEspecialidadesPorCentroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEspecialidadesPorCentroResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProfecionalesPorEspecialidadesYCentro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="centroID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="especialidadID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProfecionalesPorEspecialidadesYCentroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProfecionalesPorEspecialidadesYCentroResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTipoDocumento">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTipoDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTipoDocumentoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSedes">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetSedesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSedesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarSolicitudTurnos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strNombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strFechaNacimiento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTipoDoc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDocumento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTelCelular" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTelFijo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strObraSocial" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPlan" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCentro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEspecialidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strProfesional" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMotivo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="iTipoDoc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="iCentro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="iEspecialidad" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="iProfesional" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CargarSolicitudTurnosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CargarSolicitudTurnosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RegistrarConsultaSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarConsulta" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarConsultaSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarConsultaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCargosSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCargos" />
+  </wsdl:message>
+  <wsdl:message name="GetCargosSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCargosResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarContactoSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarContacto" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarContactoSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarContactoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEspecialidadesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEspecialidades" />
+  </wsdl:message>
+  <wsdl:message name="GetEspecialidadesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEspecialidadesResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarSuscriptoSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarSuscripto" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarSuscriptoSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarSuscriptoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarEmpresaSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarEmpresa" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarEmpresaSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarEmpresaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUbicacionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUbicacion" />
+  </wsdl:message>
+  <wsdl:message name="GetUbicacionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUbicacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnvioConsultaSoapIn">
+    <wsdl:part name="parameters" element="tns:EnvioConsulta" />
+  </wsdl:message>
+  <wsdl:message name="EnvioConsultaSoapOut">
+    <wsdl:part name="parameters" element="tns:EnvioConsultaResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargarEspecialidadesAutocompleteSoapIn">
+    <wsdl:part name="parameters" element="tns:CargarEspecialidadesAutocomplete" />
+  </wsdl:message>
+  <wsdl:message name="CargarEspecialidadesAutocompleteSoapOut">
+    <wsdl:part name="parameters" element="tns:CargarEspecialidadesAutocompleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargarEspecialidadesBuscarSoapIn">
+    <wsdl:part name="parameters" element="tns:CargarEspecialidadesBuscar" />
+  </wsdl:message>
+  <wsdl:message name="CargarEspecialidadesBuscarSoapOut">
+    <wsdl:part name="parameters" element="tns:CargarEspecialidadesBuscarResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargarEspecialidadesBuscar2SoapIn">
+    <wsdl:part name="parameters" element="tns:CargarEspecialidadesBuscar2" />
+  </wsdl:message>
+  <wsdl:message name="CargarEspecialidadesBuscar2SoapOut">
+    <wsdl:part name="parameters" element="tns:CargarEspecialidadesBuscar2Response" />
+  </wsdl:message>
+  <wsdl:message name="CargarCoberturasBuscarSoapIn">
+    <wsdl:part name="parameters" element="tns:CargarCoberturasBuscar" />
+  </wsdl:message>
+  <wsdl:message name="CargarCoberturasBuscarSoapOut">
+    <wsdl:part name="parameters" element="tns:CargarCoberturasBuscarResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargarAtencionPacienteSoapIn">
+    <wsdl:part name="parameters" element="tns:CargarAtencionPaciente" />
+  </wsdl:message>
+  <wsdl:message name="CargarAtencionPacienteSoapOut">
+    <wsdl:part name="parameters" element="tns:CargarAtencionPacienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargarAtencionEmpresasSoapIn">
+    <wsdl:part name="parameters" element="tns:CargarAtencionEmpresas" />
+  </wsdl:message>
+  <wsdl:message name="CargarAtencionEmpresasSoapOut">
+    <wsdl:part name="parameters" element="tns:CargarAtencionEmpresasResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargarTrabajaNosotrosSoapIn">
+    <wsdl:part name="parameters" element="tns:CargarTrabajaNosotros" />
+  </wsdl:message>
+  <wsdl:message name="CargarTrabajaNosotrosSoapOut">
+    <wsdl:part name="parameters" element="tns:CargarTrabajaNosotrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCentrosSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCentros" />
+  </wsdl:message>
+  <wsdl:message name="GetCentrosSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCentrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEspecialidadesPorCentroSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEspecialidadesPorCentro" />
+  </wsdl:message>
+  <wsdl:message name="GetEspecialidadesPorCentroSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEspecialidadesPorCentroResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProfecionalesPorEspecialidadesYCentroSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProfecionalesPorEspecialidadesYCentro" />
+  </wsdl:message>
+  <wsdl:message name="GetProfecionalesPorEspecialidadesYCentroSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProfecionalesPorEspecialidadesYCentroResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTipoDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTipoDocumento" />
+  </wsdl:message>
+  <wsdl:message name="GetTipoDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTipoDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSedesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSedes" />
+  </wsdl:message>
+  <wsdl:message name="GetSedesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSedesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CargarSolicitudTurnosSoapIn">
+    <wsdl:part name="parameters" element="tns:CargarSolicitudTurnos" />
+  </wsdl:message>
+  <wsdl:message name="CargarSolicitudTurnosSoapOut">
+    <wsdl:part name="parameters" element="tns:CargarSolicitudTurnosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="GetDataWithAjaxSoap">
+    <wsdl:operation name="RegistrarConsulta">
+      <wsdl:input message="tns:RegistrarConsultaSoapIn" />
+      <wsdl:output message="tns:RegistrarConsultaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCargos">
+      <wsdl:input message="tns:GetCargosSoapIn" />
+      <wsdl:output message="tns:GetCargosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarContacto">
+      <wsdl:input message="tns:RegistrarContactoSoapIn" />
+      <wsdl:output message="tns:RegistrarContactoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEspecialidades">
+      <wsdl:input message="tns:GetEspecialidadesSoapIn" />
+      <wsdl:output message="tns:GetEspecialidadesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarSuscripto">
+      <wsdl:input message="tns:RegistrarSuscriptoSoapIn" />
+      <wsdl:output message="tns:RegistrarSuscriptoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarEmpresa">
+      <wsdl:input message="tns:RegistrarEmpresaSoapIn" />
+      <wsdl:output message="tns:RegistrarEmpresaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUbicacion">
+      <wsdl:input message="tns:GetUbicacionSoapIn" />
+      <wsdl:output message="tns:GetUbicacionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnvioConsulta">
+      <wsdl:input message="tns:EnvioConsultaSoapIn" />
+      <wsdl:output message="tns:EnvioConsultaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarEspecialidadesAutocomplete">
+      <wsdl:input message="tns:CargarEspecialidadesAutocompleteSoapIn" />
+      <wsdl:output message="tns:CargarEspecialidadesAutocompleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarEspecialidadesBuscar">
+      <wsdl:input message="tns:CargarEspecialidadesBuscarSoapIn" />
+      <wsdl:output message="tns:CargarEspecialidadesBuscarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarEspecialidadesBuscar2">
+      <wsdl:input message="tns:CargarEspecialidadesBuscar2SoapIn" />
+      <wsdl:output message="tns:CargarEspecialidadesBuscar2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarCoberturasBuscar">
+      <wsdl:input message="tns:CargarCoberturasBuscarSoapIn" />
+      <wsdl:output message="tns:CargarCoberturasBuscarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarAtencionPaciente">
+      <wsdl:input message="tns:CargarAtencionPacienteSoapIn" />
+      <wsdl:output message="tns:CargarAtencionPacienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarAtencionEmpresas">
+      <wsdl:input message="tns:CargarAtencionEmpresasSoapIn" />
+      <wsdl:output message="tns:CargarAtencionEmpresasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarTrabajaNosotros">
+      <wsdl:input message="tns:CargarTrabajaNosotrosSoapIn" />
+      <wsdl:output message="tns:CargarTrabajaNosotrosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCentros">
+      <wsdl:input message="tns:GetCentrosSoapIn" />
+      <wsdl:output message="tns:GetCentrosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEspecialidadesPorCentro">
+      <wsdl:input message="tns:GetEspecialidadesPorCentroSoapIn" />
+      <wsdl:output message="tns:GetEspecialidadesPorCentroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProfecionalesPorEspecialidadesYCentro">
+      <wsdl:input message="tns:GetProfecionalesPorEspecialidadesYCentroSoapIn" />
+      <wsdl:output message="tns:GetProfecionalesPorEspecialidadesYCentroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTipoDocumento">
+      <wsdl:input message="tns:GetTipoDocumentoSoapIn" />
+      <wsdl:output message="tns:GetTipoDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSedes">
+      <wsdl:input message="tns:GetSedesSoapIn" />
+      <wsdl:output message="tns:GetSedesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CargarSolicitudTurnos">
+      <wsdl:input message="tns:CargarSolicitudTurnosSoapIn" />
+      <wsdl:output message="tns:CargarSolicitudTurnosSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetDataWithAjaxSoap" type="tns:GetDataWithAjaxSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegistrarConsulta">
+      <soap:operation soapAction="http://tempuri.org/RegistrarConsulta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCargos">
+      <soap:operation soapAction="http://tempuri.org/GetCargos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarContacto">
+      <soap:operation soapAction="http://tempuri.org/RegistrarContacto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEspecialidades">
+      <soap:operation soapAction="http://tempuri.org/GetEspecialidades" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarSuscripto">
+      <soap:operation soapAction="http://tempuri.org/RegistrarSuscripto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarEmpresa">
+      <soap:operation soapAction="http://tempuri.org/RegistrarEmpresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUbicacion">
+      <soap:operation soapAction="http://tempuri.org/GetUbicacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnvioConsulta">
+      <soap:operation soapAction="http://tempuri.org/EnvioConsulta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarEspecialidadesAutocomplete">
+      <soap:operation soapAction="http://tempuri.org/CargarEspecialidadesAutocomplete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarEspecialidadesBuscar">
+      <soap:operation soapAction="http://tempuri.org/CargarEspecialidadesBuscar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarEspecialidadesBuscar2">
+      <soap:operation soapAction="http://tempuri.org/CargarEspecialidadesBuscar2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarCoberturasBuscar">
+      <soap:operation soapAction="http://tempuri.org/CargarCoberturasBuscar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarAtencionPaciente">
+      <soap:operation soapAction="http://tempuri.org/CargarAtencionPaciente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarAtencionEmpresas">
+      <soap:operation soapAction="http://tempuri.org/CargarAtencionEmpresas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarTrabajaNosotros">
+      <soap:operation soapAction="http://tempuri.org/CargarTrabajaNosotros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCentros">
+      <soap:operation soapAction="http://tempuri.org/GetCentros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEspecialidadesPorCentro">
+      <soap:operation soapAction="http://tempuri.org/GetEspecialidadesPorCentro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfecionalesPorEspecialidadesYCentro">
+      <soap:operation soapAction="http://tempuri.org/GetProfecionalesPorEspecialidadesYCentro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTipoDocumento">
+      <soap:operation soapAction="http://tempuri.org/GetTipoDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSedes">
+      <soap:operation soapAction="http://tempuri.org/GetSedes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarSolicitudTurnos">
+      <soap:operation soapAction="http://tempuri.org/CargarSolicitudTurnos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GetDataWithAjaxSoap12" type="tns:GetDataWithAjaxSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RegistrarConsulta">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarConsulta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCargos">
+      <soap12:operation soapAction="http://tempuri.org/GetCargos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarContacto">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarContacto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEspecialidades">
+      <soap12:operation soapAction="http://tempuri.org/GetEspecialidades" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarSuscripto">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarSuscripto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarEmpresa">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarEmpresa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUbicacion">
+      <soap12:operation soapAction="http://tempuri.org/GetUbicacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnvioConsulta">
+      <soap12:operation soapAction="http://tempuri.org/EnvioConsulta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarEspecialidadesAutocomplete">
+      <soap12:operation soapAction="http://tempuri.org/CargarEspecialidadesAutocomplete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarEspecialidadesBuscar">
+      <soap12:operation soapAction="http://tempuri.org/CargarEspecialidadesBuscar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarEspecialidadesBuscar2">
+      <soap12:operation soapAction="http://tempuri.org/CargarEspecialidadesBuscar2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarCoberturasBuscar">
+      <soap12:operation soapAction="http://tempuri.org/CargarCoberturasBuscar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarAtencionPaciente">
+      <soap12:operation soapAction="http://tempuri.org/CargarAtencionPaciente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarAtencionEmpresas">
+      <soap12:operation soapAction="http://tempuri.org/CargarAtencionEmpresas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarTrabajaNosotros">
+      <soap12:operation soapAction="http://tempuri.org/CargarTrabajaNosotros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCentros">
+      <soap12:operation soapAction="http://tempuri.org/GetCentros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEspecialidadesPorCentro">
+      <soap12:operation soapAction="http://tempuri.org/GetEspecialidadesPorCentro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProfecionalesPorEspecialidadesYCentro">
+      <soap12:operation soapAction="http://tempuri.org/GetProfecionalesPorEspecialidadesYCentro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTipoDocumento">
+      <soap12:operation soapAction="http://tempuri.org/GetTipoDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSedes">
+      <soap12:operation soapAction="http://tempuri.org/GetSedes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CargarSolicitudTurnos">
+      <soap12:operation soapAction="http://tempuri.org/CargarSolicitudTurnos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetDataWithAjax">
+    <wsdl:port name="GetDataWithAjaxSoap" binding="tns:GetDataWithAjaxSoap">
+      <soap:address location="http://www.sanatorioallende.com/web/GetDataWithAjax.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GetDataWithAjaxSoap12" binding="tns:GetDataWithAjaxSoap12">
+      <soap12:address location="http://www.sanatorioallende.com/web/GetDataWithAjax.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
