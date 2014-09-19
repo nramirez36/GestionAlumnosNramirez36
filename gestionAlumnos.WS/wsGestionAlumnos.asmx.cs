@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Services;
 
-namespace gestionAlumnos.WS
+namespace gestionalumnos.WS
 {
     /// <summary>
     /// Descripción breve de wsGestionAlumnos
@@ -16,7 +16,6 @@ namespace gestionAlumnos.WS
     // [System.Web.Script.Services.ScriptService]
     public class wsGestionAlumnos : System.Web.Services.WebService
     {
-
         //[WebMethod]
         public string HelloWorld()
         {

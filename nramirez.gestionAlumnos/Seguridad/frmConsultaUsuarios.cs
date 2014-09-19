@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using gestionalumnos.BL;
 using nramirez36.Logger;
 using gestionalumnos.Entities;
+using gestionalumnos.Comun;
 namespace nramirez.gestionAlumnos.Seguridad
 {
     public partial class frmConsultaUsuarios : Form

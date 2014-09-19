@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using gestionalumnos.BL;
 using gestionalumnos.Entities;
 using nramirez.gestionAlumnos.Seguridad;
+using nramirez.gestionAlumnos.Alumnos;
+using System.Windows.Input;
 namespace nramirez.gestionAlumnos
 {
     public partial class frmPrincipal : Form
@@ -50,19 +52,23 @@ namespace nramirez.gestionAlumnos
         #region Alumnos
         private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmAltaAlumnos frm = new frmAltaAlumnos();
+            frm.Show();
         }
         private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmBuscarAlumnos frm = new frmBuscarAlumnos();
+            frm.Show();
         }
         private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmBajaAlumnos frmBajaAlumno = new frmBajaAlumnos();
+            frmBajaAlumno.Show();
         }
         private void buscarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmBuscarAlumnos frmBuscarAlumnos = new frmBuscarAlumnos();
+            frmBuscarAlumnos.Show();
         }
         #endregion
         #region Materias
@@ -251,5 +257,6 @@ namespace nramirez.gestionAlumnos
             }
         }
         #endregion
+
     }
 }

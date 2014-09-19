@@ -57,6 +57,10 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -91,6 +95,18 @@
     <Compile Include="Alumnos\frmModificarAlumnos.Designer.cs">
       <DependentUpon>frmModificarAlumnos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Alumnos\ucDatosAlumnos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Alumnos\ucDatosAlumnos.Designer.cs">
+      <DependentUpon>ucDatosAlumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumnos\ucDatosDomicilio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Alumnos\ucDatosDomicilio.Designer.cs">
+      <DependentUpon>ucDatosDomicilio.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +140,12 @@
     <Compile Include="Seguridad\frmABMUsuarios.Designer.cs">
       <DependentUpon>frmABMUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Seguridad\frmCambiarPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\frmCambiarPassword.Designer.cs">
+      <DependentUpon>frmCambiarPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Seguridad\frmConsultaRoles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,24 +157,6 @@
     </Compile>
     <Compile Include="Seguridad\frmConsultaUsuarios.Designer.cs">
       <DependentUpon>frmConsultaUsuarios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Seguridad\ucDatosRoles.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Seguridad\ucDatosRoles.Designer.cs">
-      <DependentUpon>ucDatosRoles.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Seguridad\ucDatosUsuario.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Seguridad\ucDatosUsuario.Designer.cs">
-      <DependentUpon>ucDatosUsuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Seguridad\frmCambiarPassword.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Seguridad\frmCambiarPassword.Designer.cs">
-      <DependentUpon>frmCambiarPassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Seguridad\frmGestionPermisos.cs">
       <SubType>Form</SubType>
@@ -178,7 +182,33 @@
     <Compile Include="Seguridad\frmUsuario.Designer.cs">
       <DependentUpon>frmUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utiles.cs" />
+    <Compile Include="Seguridad\ucDatosRoles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Seguridad\ucDatosRoles.Designer.cs">
+      <DependentUpon>ucDatosRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\ucDatosUsuario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Seguridad\ucDatosUsuario.Designer.cs">
+      <DependentUpon>ucDatosUsuario.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Alumnos\frmAltaAlumnos.resx">
+      <DependentUpon>frmAltaAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumnos\frmBajaAlumnos.resx">
+      <DependentUpon>frmBajaAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumnos\frmBuscarAlumnos.resx">
+      <DependentUpon>frmBuscarAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumnos\ucDatosAlumnos.resx">
+      <DependentUpon>ucDatosAlumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumnos\ucDatosDomicilio.resx">
+      <DependentUpon>ucDatosDomicilio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,23 +243,23 @@
     <EmbeddedResource Include="Seguridad\frmConsultaUsuarios.resx">
       <DependentUpon>frmConsultaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Seguridad\frmReestablecerClave.resx">
-      <DependentUpon>frmReestablecerClave.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Seguridad\ucDatosRoles.resx">
-      <DependentUpon>ucDatosRoles.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Seguridad\ucDatosUsuario.resx">
-      <DependentUpon>ucDatosUsuario.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Seguridad\frmGestionPermisos.resx">
       <DependentUpon>frmGestionPermisos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Seguridad\frmGestionRoles.resx">
       <DependentUpon>frmGestionRoles.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\frmReestablecerClave.resx">
+      <DependentUpon>frmReestablecerClave.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Seguridad\frmUsuario.resx">
       <DependentUpon>frmUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\ucDatosRoles.resx">
+      <DependentUpon>ucDatosRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\ucDatosUsuario.resx">
+      <DependentUpon>ucDatosUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -242,7 +272,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Cursos\" />
@@ -271,13 +303,14 @@
       <Project>{5fcb4b6a-ec15-45a2-a60a-32993a4e77e4}</Project>
       <Name>gestionalumnos.BL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\gestionalumnos.comun\gestionalumnos.Comun.csproj">
+      <Project>{043513cf-089c-47fe-8e0d-47c0f0011e04}</Project>
+      <Name>gestionalumnos.Comun</Name>
+    </ProjectReference>
     <ProjectReference Include="..\gestionalumnos.Entities\gestionalumnos.Entities.csproj">
       <Project>{e046b95c-2fad-4eed-ae73-6bf467fc08ac}</Project>
       <Name>gestionalumnos.Entities</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Retro.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

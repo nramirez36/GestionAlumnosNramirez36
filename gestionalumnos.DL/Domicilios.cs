@@ -104,5 +104,27 @@ namespace gestionalumnos.DL
             }
             return cli;
         }
+        public static Domicilio Buscar(int id)
+        {
+            Database odb = DatabaseFactory.CreateDatabase("gestionAlumnos");
+            try
+            {
+                List<Domicilio> lst = odb.ExecuteSprocAccessor("Domicilio_BuscarByID", MapBuilder<Domicilio>.MapAllProperties().Build(), id).ToList();
+                if (lst != null && lst.Count > 0)
+                {
+                    return lst[0];
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                //Logger.WriteXMLError("Users.cs", "Users.cs", "IniciarSesion", ex.Message);
+                Logger.WriteXMLError("Domicilios.cs", "Domicilio.cs", "Buscar", ex.Message);
+                throw;
+            }
+        }
     }
 }

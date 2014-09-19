@@ -19,5 +19,6 @@ namespace gestionalumnos.Entities
         public string nacionalidad { get; set; }
         public DateTime fechanacimiento { get; set; }
         public int edad { get; set; }
+        public string email { get; set; }
     }
 }

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gestionalumnos.Entities", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gestionAlumnos.WS", "gestionAlumnos.WS\gestionAlumnos.WS.csproj", "{A4534B0A-EDD6-458D-8107-3AC5E2F64F01}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gestionalumnos.Comun", "gestionalumnos.comun\gestionalumnos.Comun.csproj", "{043513CF-089C-47FE-8E0D-47C0F0011E04}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{A4534B0A-EDD6-458D-8107-3AC5E2F64F01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4534B0A-EDD6-458D-8107-3AC5E2F64F01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4534B0A-EDD6-458D-8107-3AC5E2F64F01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{043513CF-089C-47FE-8E0D-47C0F0011E04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{043513CF-089C-47FE-8E0D-47C0F0011E04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{043513CF-089C-47FE-8E0D-47C0F0011E04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{043513CF-089C-47FE-8E0D-47C0F0011E04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Windows.Input;
 namespace nramirez.gestionAlumnos.Alumnos
 {
     public partial class frmBuscarAlumnos : Form
@@ -16,5 +16,10 @@ namespace nramirez.gestionAlumnos.Alumnos
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+        }
+
     }
 }

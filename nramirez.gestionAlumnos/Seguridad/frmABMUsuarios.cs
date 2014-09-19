@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using gestionalumnos.Entities;
 using gestionalumnos.BL;
+using gestionalumnos.Comun;
 namespace nramirez.gestionAlumnos.Seguridad
 {
     public partial class frmABMUsuarios : Form

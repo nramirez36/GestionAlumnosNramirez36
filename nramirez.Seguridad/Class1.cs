@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace gestionalumnos.DL
+namespace nramirez.Seguridad
 {
-    class DepartamentosXProvincia
+    public class Class1
     {
     }
 }

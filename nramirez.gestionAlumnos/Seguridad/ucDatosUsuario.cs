@@ -9,22 +9,31 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using gestionalumnos.Entities;
 using gestionalumnos.BL;
+using gestionalumnos.Comun;
 namespace nramirez.gestionAlumnos.Seguridad.ABM_Usuarios
 {
     public partial class ucDatosUsuario : UserControl
     {
-        #region Variables
-
-        #endregion
         #region Propiedades
         public Users Usuario { get; set; }
         public bool ModoSoloLectura { get; set; }
         #endregion
         #region Constructor
-
+        public ucDatosUsuario()
+        {
+            InitializeComponent();
+        }
         #endregion
         #region Eventos
-
+        private void ucDatosUsuario_Load(object sender, EventArgs e)
+        {
+            HabilitarControles();
+            RegistrarControles();
+        }
+        private void ucDatosUsuario_Paint(object sender, PaintEventArgs e)
+        {
+            HabilitarControles();
+        }
         #endregion
         #region Metodos
         private void RegistrarControles()
@@ -105,30 +114,12 @@ namespace nramirez.gestionAlumnos.Seguridad.ABM_Usuarios
             txtPassword.Text = "";
             txtUsuario.Text = "";
         }
-        #endregion
-
-
-
-        public ucDatosUsuario()
-        {
-            InitializeComponent();
-        }
-
-        private void ucDatosUsuario_Load(object sender, EventArgs e)
-        {
-            HabilitarControles();
-            RegistrarControles();
-        }
-
         public void llenarControles(string pUser, string pPass, string pEmail)
         {
             txtUsuario.Text = pUser;
             txtPassword.Text = pPass;
             txtEmail.Text = pEmail;
         }
-        private void ucDatosUsuario_Paint(object sender, PaintEventArgs e)
-        {
-            HabilitarControles();
-        }
+        #endregion
     }
 }

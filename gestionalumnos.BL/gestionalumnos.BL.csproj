@@ -44,7 +44,6 @@
     <Compile Include="GestorControles.cs" />
     <Compile Include="GestorControlsToRole.cs" />
     <Compile Include="GestorUsersToRoles.cs" />
-    <Compile Include="GestorDepartamentos.cs" />
     <Compile Include="GestorDomicilios.cs" />
     <Compile Include="GestorLocalidades.cs" />
     <Compile Include="GestorProvincias.cs" />

@@ -38,7 +38,7 @@ namespace nramirez.gestionAlumnos.Seguridad
             RegistrarControles();
             LoadGrilla();
             LoadPaginas();
-            LoadRoles();
+            LoadRoles();            
             //LoadArbolPermisos();
             string value = ddlPage.SelectedValue.ToString();
             LoadArbolPermisos(value);

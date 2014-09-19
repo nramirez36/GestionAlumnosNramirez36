@@ -41,11 +41,8 @@
   <ItemGroup>
     <Compile Include="Alumno.cs" />
     <Compile Include="Barrio.cs" />
-    <Compile Include="BarriosXLocalidades.cs" />
     <Compile Include="Controls.cs" />
     <Compile Include="ControlsToRoles.cs" />
-    <Compile Include="Departamento.cs" />
-    <Compile Include="DepartamentosXProvincia.cs" />
     <Compile Include="Domicilio.cs" />
     <Compile Include="Localidad.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

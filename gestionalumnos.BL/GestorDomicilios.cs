@@ -29,5 +29,9 @@ namespace gestionalumnos.BL
         {
             return Domicilios.ObtenerUltimoID();
         }
+        public Domicilio Buscar(int id)
+        {
+            return Domicilios.Buscar(id);
+        }
     }
 }

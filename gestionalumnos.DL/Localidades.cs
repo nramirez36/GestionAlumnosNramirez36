@@ -12,12 +12,12 @@ namespace gestionalumnos.DL
 {
     public class Localidades
     {
-        public static IEnumerable<Localidad> Listar(int pDepartamento)
+        public static IEnumerable<Localidad> Listar(int pProvincia)
         {
             Database odb = DatabaseFactory.CreateDatabase("gestionAlumnos");
             try
             {
-                return odb.ExecuteSprocAccessor("Localidad_Listar", MapBuilder<Localidad>.MapAllProperties().Build(), pDepartamento);
+                return odb.ExecuteSprocAccessor("Localidad_Listar", MapBuilder<Localidad>.MapAllProperties().Build(), pProvincia);
             }
             catch (Exception ex)
             {
@@ -55,7 +55,7 @@ namespace gestionalumnos.DL
             int result;
             try
             {
-                result = oDb.ExecuteNonQuery("Localidad_Modificar", pLocalidad.nombre, pLocalidad.departamento_id,pLocalidad.id);
+                result = oDb.ExecuteNonQuery("Localidad_Modificar", pLocalidad.nombre, pLocalidad.provincia_id,pLocalidad.localidad_id);
                 if (result > 0)
                 {
                     return true;
@@ -78,7 +78,7 @@ namespace gestionalumnos.DL
             int clienteID = -1;
             try
             {
-                clienteID = int.Parse(oDb.ExecuteScalar("Localidad_Insertar", pLocalidad.nombre, pLocalidad.departamento_id).ToString());
+                clienteID = int.Parse(oDb.ExecuteScalar("Localidad_Insertar", pLocalidad.nombre, pLocalidad.provincia_id).ToString());
             }
             catch (Exception ex)
             {

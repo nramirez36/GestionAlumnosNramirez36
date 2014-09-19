@@ -7,7 +7,7 @@ using gestionalumnos.DL;
 using gestionalumnos.Entities;
 namespace gestionalumnos.BL
 {
-    class GestorAlumnos
+    public class GestorAlumnos
     {
         public int Insertar(Alumno pAlumno)
         {
@@ -32,6 +32,10 @@ namespace gestionalumnos.BL
         public IEnumerable<Alumno> ConsultarAlumnos(int pDocumento)
         {
             return Alumnos.BuscarAlumnosPorDocumento(pDocumento);
+        }
+        public Alumno Buscar(int id)
+        {
+            return Alumnos.Buscar(id);
         }
     }
 }

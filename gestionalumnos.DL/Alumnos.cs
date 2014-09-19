@@ -69,7 +69,7 @@ namespace gestionalumnos.DL
             int result;
             try
             {
-                result = oDb.ExecuteNonQuery("Alumno_Modificar", pAlumno.nombres, pAlumno.apellidos, pAlumno.direccionID, pAlumno.tipodocumentoID, pAlumno.nrodocumento, pAlumno.telefonofijo, pAlumno.telefonocelular, pAlumno.nacionalidad, pAlumno.fechanacimiento, pAlumno.edad, pAlumno.alumnoID);
+                result = oDb.ExecuteNonQuery("Alumno_Modificar", pAlumno.nombres, pAlumno.apellidos, pAlumno.direccionID, pAlumno.tipodocumentoID, pAlumno.nrodocumento, pAlumno.telefonofijo, pAlumno.telefonocelular, pAlumno.nacionalidad, pAlumno.fechanacimiento, pAlumno.edad,pAlumno.email, pAlumno.alumnoID);
                 if (result > 0)
                 {
                     return true;
@@ -92,7 +92,7 @@ namespace gestionalumnos.DL
             int clienteID = -1;
             try
             {
-                clienteID = int.Parse(oDb.ExecuteScalar("Alumno_Insertar", pAlumno.apellidos, pAlumno.direccionID, pAlumno.tipodocumentoID, pAlumno.nrodocumento, pAlumno.telefonofijo, pAlumno.telefonocelular, pAlumno.nacionalidad, pAlumno.fechanacimiento, pAlumno.edad).ToString());
+                clienteID = int.Parse(oDb.ExecuteScalar("Alumno_Insertar", pAlumno.apellidos, pAlumno.direccionID, pAlumno.tipodocumentoID, pAlumno.nrodocumento, pAlumno.telefonofijo, pAlumno.telefonocelular, pAlumno.nacionalidad, pAlumno.fechanacimiento, pAlumno.edad, pAlumno.email).ToString());
             }
             catch (Exception ex)
             {
@@ -117,6 +117,28 @@ namespace gestionalumnos.DL
                 throw;
             }
             return cli;
+        }
+        public static Alumno Buscar(int id)
+        {
+            Database odb = DatabaseFactory.CreateDatabase("gestionAlumnos");
+            try
+            {
+                List<Alumno> lst = odb.ExecuteSprocAccessor("Alumno_BuscarByID", MapBuilder<Alumno>.MapAllProperties().Build(), id).ToList();
+                if (lst != null && lst.Count > 0)
+                {
+                    return lst[0];
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                //Logger.WriteXMLError("Users.cs", "Users.cs", "IniciarSesion", ex.Message);
+                Logger.WriteXMLError("Alumno.cs", "Alumno.cs", "Buscar", ex.Message);
+                throw;
+            }
         }
     }
 }

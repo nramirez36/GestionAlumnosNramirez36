@@ -13,9 +13,9 @@ namespace gestionalumnos.BL
         {
             return Localidades.Insertar(pLocalidad);
         }
-        public IEnumerable<Localidad> Listar(int pDepartamento)
+        public IEnumerable<Localidad> Listar(int pProvincia)
         {
-            return Localidades.Listar(pDepartamento);
+            return Localidades.Listar(pProvincia);
         }
         public bool Modificar(Localidad pLocalidad)
         {

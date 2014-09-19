@@ -156,12 +156,10 @@
             // ByRoleRB
             // 
             this.ByRoleRB.AutoSize = true;
-            this.ByRoleRB.Checked = true;
             this.ByRoleRB.Location = new System.Drawing.Point(492, 470);
             this.ByRoleRB.Name = "ByRoleRB";
             this.ByRoleRB.Size = new System.Drawing.Size(60, 17);
             this.ByRoleRB.TabIndex = 66;
-            this.ByRoleRB.TabStop = true;
             this.ByRoleRB.Text = "Por Rol";
             this.ByRoleRB.UseVisualStyleBackColor = true;
             this.ByRoleRB.Click += new System.EventHandler(this.ByRoleRB_Click);
@@ -169,10 +167,12 @@
             // ByControlRB
             // 
             this.ByControlRB.AutoSize = true;
+            this.ByControlRB.Checked = true;
             this.ByControlRB.Location = new System.Drawing.Point(413, 470);
             this.ByControlRB.Name = "ByControlRB";
             this.ByControlRB.Size = new System.Drawing.Size(77, 17);
             this.ByControlRB.TabIndex = 65;
+            this.ByControlRB.TabStop = true;
             this.ByControlRB.Text = "Por Control";
             this.ByControlRB.UseVisualStyleBackColor = true;
             this.ByControlRB.CheckedChanged += new System.EventHandler(this.ByControlRB_CheckedChanged);
