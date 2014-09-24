@@ -37,20 +37,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.grbDomicilio = new System.Windows.Forms.GroupBox();
-            this.txtEdad = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.txtNacionalidad = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtNroDoc = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cmbTipoDoc = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.cmbBarrio = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cmbCiudad = new System.Windows.Forms.ComboBox();
@@ -65,6 +51,20 @@
             this.label16 = new System.Windows.Forms.Label();
             this.txtCalle = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.txtEdad = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dtpFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.txtNacionalidad = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtNroDoc = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cmbTipoDoc = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.grbDomicilio.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -161,121 +161,6 @@
             this.grbDomicilio.TabStop = false;
             this.grbDomicilio.Text = "Domicilio";
             // 
-            // txtEdad
-            // 
-            this.txtEdad.Enabled = false;
-            this.txtEdad.Location = new System.Drawing.Point(90, 164);
-            this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(68, 20);
-            this.txtEdad.TabIndex = 34;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 167);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 33;
-            this.label7.Text = "Edad:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 140);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 13);
-            this.label6.TabIndex = 31;
-            this.label6.Text = "Fecha de Nacimiento:";
-            // 
-            // dtpFechaNacimiento
-            // 
-            this.dtpFechaNacimiento.Location = new System.Drawing.Point(129, 137);
-            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
-            this.dtpFechaNacimiento.Size = new System.Drawing.Size(200, 20);
-            this.dtpFechaNacimiento.TabIndex = 32;
-            // 
-            // txtNacionalidad
-            // 
-            this.txtNacionalidad.Location = new System.Drawing.Point(90, 111);
-            this.txtNacionalidad.Name = "txtNacionalidad";
-            this.txtNacionalidad.Size = new System.Drawing.Size(187, 20);
-            this.txtNacionalidad.TabIndex = 30;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 114);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 13);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Nacionalidad:";
-            // 
-            // txtNroDoc
-            // 
-            this.txtNroDoc.Location = new System.Drawing.Point(90, 85);
-            this.txtNroDoc.Name = "txtNroDoc";
-            this.txtNroDoc.Size = new System.Drawing.Size(121, 20);
-            this.txtNroDoc.TabIndex = 28;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 88);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 13);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "Documento";
-            // 
-            // cmbTipoDoc
-            // 
-            this.cmbTipoDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTipoDoc.FormattingEnabled = true;
-            this.cmbTipoDoc.Location = new System.Drawing.Point(90, 58);
-            this.cmbTipoDoc.Name = "cmbTipoDoc";
-            this.cmbTipoDoc.Size = new System.Drawing.Size(121, 21);
-            this.cmbTipoDoc.TabIndex = 26;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 61);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 13);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "Tipo de Doc:";
-            // 
-            // txtApellido
-            // 
-            this.txtApellido.Location = new System.Drawing.Point(90, 32);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(187, 20);
-            this.txtApellido.TabIndex = 24;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 35);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Apellido:";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(90, 6);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(187, 20);
-            this.txtNombre.TabIndex = 22;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Nombres:";
-            // 
             // cmbBarrio
             // 
             this.cmbBarrio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -284,6 +169,7 @@
             this.cmbBarrio.Name = "cmbBarrio";
             this.cmbBarrio.Size = new System.Drawing.Size(121, 21);
             this.cmbBarrio.TabIndex = 27;
+            this.cmbBarrio.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbBarrio_MouseDown);
             // 
             // label11
             // 
@@ -302,6 +188,8 @@
             this.cmbCiudad.Name = "cmbCiudad";
             this.cmbCiudad.Size = new System.Drawing.Size(121, 21);
             this.cmbCiudad.TabIndex = 25;
+            this.cmbCiudad.SelectionChangeCommitted += new System.EventHandler(this.cmbCiudad_SelectionChangeCommitted);
+            this.cmbCiudad.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbCiudad_MouseDown);
             // 
             // label12
             // 
@@ -329,6 +217,8 @@
             this.cmbProvincia.Name = "cmbProvincia";
             this.cmbProvincia.Size = new System.Drawing.Size(121, 21);
             this.cmbProvincia.TabIndex = 22;
+            this.cmbProvincia.SelectionChangeCommitted += new System.EventHandler(this.cmbProvincia_SelectionChangeCommitted);
+            this.cmbProvincia.MouseDown += new System.Windows.Forms.MouseEventHandler(this.cmbProvincia_MouseDown);
             // 
             // txtPiso
             // 
@@ -394,6 +284,123 @@
             this.label17.Size = new System.Drawing.Size(33, 13);
             this.label17.TabIndex = 14;
             this.label17.Text = "Calle:";
+            // 
+            // txtEdad
+            // 
+            this.txtEdad.Enabled = false;
+            this.txtEdad.Location = new System.Drawing.Point(90, 164);
+            this.txtEdad.Name = "txtEdad";
+            this.txtEdad.Size = new System.Drawing.Size(68, 20);
+            this.txtEdad.TabIndex = 34;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 167);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "Edad:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(12, 140);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(111, 13);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "Fecha de Nacimiento:";
+            // 
+            // dtpFechaNacimiento
+            // 
+            this.dtpFechaNacimiento.Location = new System.Drawing.Point(129, 137);
+            this.dtpFechaNacimiento.Name = "dtpFechaNacimiento";
+            this.dtpFechaNacimiento.Size = new System.Drawing.Size(200, 20);
+            this.dtpFechaNacimiento.TabIndex = 32;
+            this.dtpFechaNacimiento.ValueChanged += new System.EventHandler(this.dtpFechaNacimiento_ValueChanged);
+            // 
+            // txtNacionalidad
+            // 
+            this.txtNacionalidad.Location = new System.Drawing.Point(90, 111);
+            this.txtNacionalidad.Name = "txtNacionalidad";
+            this.txtNacionalidad.Size = new System.Drawing.Size(187, 20);
+            this.txtNacionalidad.TabIndex = 30;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(12, 114);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 13);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Nacionalidad:";
+            // 
+            // txtNroDoc
+            // 
+            this.txtNroDoc.Location = new System.Drawing.Point(90, 85);
+            this.txtNroDoc.Name = "txtNroDoc";
+            this.txtNroDoc.Size = new System.Drawing.Size(121, 20);
+            this.txtNroDoc.TabIndex = 28;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 88);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 13);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Documento";
+            // 
+            // cmbTipoDoc
+            // 
+            this.cmbTipoDoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTipoDoc.FormattingEnabled = true;
+            this.cmbTipoDoc.Location = new System.Drawing.Point(90, 58);
+            this.cmbTipoDoc.Name = "cmbTipoDoc";
+            this.cmbTipoDoc.Size = new System.Drawing.Size(121, 21);
+            this.cmbTipoDoc.TabIndex = 26;
+            this.cmbTipoDoc.DropDown += new System.EventHandler(this.cmbTipoDoc_DropDown);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 61);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 13);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Tipo de Doc:";
+            // 
+            // txtApellido
+            // 
+            this.txtApellido.Location = new System.Drawing.Point(90, 32);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(187, 20);
+            this.txtApellido.TabIndex = 24;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 35);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Apellido:";
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(90, 6);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(187, 20);
+            this.txtNombre.TabIndex = 22;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Nombres:";
             // 
             // frmAltaAlumnos
             // 

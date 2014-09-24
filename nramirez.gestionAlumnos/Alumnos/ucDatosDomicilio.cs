@@ -40,6 +40,34 @@ namespace nramirez.gestionAlumnos.Alumnos
         {
             habilitarControles();
         }
+        private void cmbProvincia_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            int pCodProvincia = Convert.ToInt32(cmbProvincia.SelectedValue);
+            cargarLocalidades(pCodProvincia);
+        }
+        private void cmbCiudad_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            int pCodLocalidad = Convert.ToInt32(cmbCiudad.SelectedValue);
+            cargarBarrios(pCodLocalidad);
+        }
+        private void cmbProvincia_DropDown(object sender, EventArgs e)
+        {
+            int pw = -1;
+            Utiles.GetLargestTextExtent(this.cmbProvincia, ref pw);
+            this.cmbProvincia.DropDownWidth = pw;
+        }
+        private void cmbCiudad_DropDown(object sender, EventArgs e)
+        {
+            int pw = -1;
+            Utiles.GetLargestTextExtent(this.cmbCiudad, ref pw);
+            this.cmbCiudad.DropDownWidth = pw;
+        }
+        private void cmbBarrio_DropDown(object sender, EventArgs e)
+        {
+            int pw = -1;
+            Utiles.GetLargestTextExtent(this.cmbBarrio, ref pw);
+            this.cmbBarrio.DropDownWidth = pw;
+        }
         #endregion
         #region Metodos
         public void habilitarControles()
@@ -144,7 +172,6 @@ namespace nramirez.gestionAlumnos.Alumnos
             DomicilioAlumno.provincia_id = int.Parse(cmbProvincia.SelectedValue.ToString());
             return true;
         }
-        #endregion
         public void cargarProvincias()
         {
             try
@@ -206,39 +233,6 @@ namespace nramirez.gestionAlumnos.Alumnos
                 Logger.WriteXMLError("ucDatosDomicilio", "ucDatosDomicilio", "cargarBarrios", ex.Message);
             }
         }
-
-        private void cmbProvincia_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            int pCodProvincia = Convert.ToInt32(cmbProvincia.SelectedValue);
-            cargarLocalidades(pCodProvincia);
-        }
-
-        private void cmbCiudad_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            int pCodLocalidad = Convert.ToInt32(cmbCiudad.SelectedValue);
-            cargarBarrios(pCodLocalidad);
-        }
-
-        private void cmbProvincia_DropDown(object sender, EventArgs e)
-        {
-            int pw = -1;
-            Utiles.GetLargestTextExtent(this.cmbProvincia, ref pw);
-            this.cmbProvincia.DropDownWidth = pw;
-        }
-
-        private void cmbCiudad_DropDown(object sender, EventArgs e)
-        {
-            int pw = -1;
-            Utiles.GetLargestTextExtent(this.cmbCiudad, ref pw);
-            this.cmbCiudad.DropDownWidth = pw;
-        }
-
-        private void cmbBarrio_DropDown(object sender, EventArgs e)
-        {
-            int pw = -1;
-            Utiles.GetLargestTextExtent(this.cmbBarrio, ref pw);
-            this.cmbBarrio.DropDownWidth = pw;
-        }
-
+        #endregion                
     }
 }
