@@ -383,7 +383,7 @@ namespace nramirez.gestionAlumnos.Alumnos
             if (pNroDoc > 0)
                 txtNroDoc.Text = pNroDoc.ToString();
             if (pFechaNac != null && (pFechaNac > DateTime.MinValue && pFechaNac < DateTime.MaxValue))
-                dtpFechaNacimiento.Value = pFechaNac;
+                dtpFechaNacimiento.Value = pFechaNac; 
             if (pCodTipoDoc > 0)
                 cmbTipoDoc.SelectedValue = pCodTipoDoc;
 
